@@ -1,10 +1,7 @@
 pipeline {
     agent any
 
-    stages {
- 
-        stage('Hello Test') {
-        
+    stages {        
         parallel {
           stage('Apple) {
             steps {
@@ -28,4 +25,5 @@ pipeline {
              }
            }
        }
+     }
 }
