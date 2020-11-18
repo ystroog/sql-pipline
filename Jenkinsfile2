@@ -1,13 +1,14 @@
 pipeline {
     agent any
 
-    stages {        
-        parallel {
-          stage('Apple') {
-            steps {
-              echo "stage : Aplle1 "
-              sleep 5
-              echo "stage :Apple 5"
+    stages { 
+        stage ('Paraallel') {
+            parallel {
+            stage('Apple') {
+                steps {
+                echo "stage : Aplle1 "
+                sleep 5
+                echo "stage :Apple 5"
              }
            }
            stage('Bannaa') {
@@ -25,5 +26,6 @@ pipeline {
              }
            }
        }
-     }
+      }
+    }
 }
