@@ -31,16 +31,5 @@ pipeline {
               echo "stage :Androed5"
              }
            }
-           
-           
-            steps {
-                echo 'Hello World from test'
-            }
-        }
-        stage('Hello Deploy') {
-            steps {
-                echo 'Hello World Deploy'
-            }    
-        }
-    }
+       }
 }
