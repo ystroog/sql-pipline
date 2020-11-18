@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello Build') {
+            steps {
+                echo 'Hello World from buld'
+            }
+        }
+        stage('Hello Test') {
+        
+        parallel {
+          stage('Apple) {
+            steps {
+              echo "stage : Aplle1 "
+              sleep 5
+              echo "stage :Apple 5"
+             }
+           }
+           stage('Bannaa) {
+            steps {
+              echo "stage : Bannana "
+              sleep 2
+              echo "stage :Bannana 5"
+             }
+           }
+           stage('Androed) {
+            steps {
+              echo "stage : Androed 1 "
+              sleep 3
+              echo "stage :Androed5"
+             }
+           }
+           
+           
+            steps {
+                echo 'Hello World from test'
+            }
+        }
+        stage('Hello Deploy') {
+            steps {
+                echo 'Hello World Deploy'
+            }    
+        }
+    }
+}
