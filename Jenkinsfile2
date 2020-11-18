@@ -3,21 +3,21 @@ pipeline {
 
     stages {        
         parallel {
-          stage('Apple) {
+          stage('Apple') {
             steps {
               echo "stage : Aplle1 "
               sleep 5
               echo "stage :Apple 5"
              }
            }
-           stage('Bannaa) {
+           stage('Bannaa') {
             steps {
               echo "stage : Bannana "
               sleep 2
               echo "stage :Bannana 5"
              }
            }
-           stage('Androed) {
+           stage('Androed') {
             steps {
               echo "stage : Androed 1 "
               sleep 3
